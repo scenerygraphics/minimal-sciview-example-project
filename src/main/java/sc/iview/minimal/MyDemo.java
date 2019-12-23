@@ -29,6 +29,7 @@
 package sc.iview.minimal;
 
 import org.scijava.command.Command;
+import org.scijava.command.CommandService;
 import org.scijava.plugin.Menu;
 import org.scijava.plugin.Parameter;
 import org.scijava.plugin.Plugin;
@@ -59,5 +60,13 @@ public class MyDemo implements Command {
         sciView.addSphere();
 
         sciView.centerOnNode( sciView.getActiveNode() );
+    }
+
+    public static void main(String[] args) {
+        SciView sciView = SciView.createSciView();
+
+        CommandService command = sciView.getScijavaContext().service(CommandService.class);
+        command.run(MyDemo.class, true);
+
     }
 }

@@ -28,17 +28,14 @@
  */
 package sc.iview.minimal;
 
+import net.imagej.ImageJ;
 import org.scijava.command.Command;
 import org.scijava.plugin.Menu;
 import org.scijava.plugin.Parameter;
 import org.scijava.plugin.Plugin;
-import org.scijava.util.Colors;
 import sc.iview.SciView;
-import sc.iview.vector.ClearGLVector3;
-import sc.iview.vector.Vector3;
 
 import static sc.iview.commands.MenuWeights.DEMO;
-import static sc.iview.commands.MenuWeights.DEMO_LINES;
 
 /**
  * Make a sphere.
@@ -57,7 +54,16 @@ public class MyDemo implements Command {
     public void run() {
 
         sciView.addSphere();
-
         sciView.centerOnNode( sciView.getActiveNode() );
+
     }
+
+    public static void main(final String... args) {
+        // We have to make SciView first to setup the graphics properly.
+		SciView sv = SciView.create();
+
+		final ImageJ ij = new ImageJ(sv.getScijavaContext());
+		ij.launch(args);
+		ij.command().run("sc.iview.minimal.MyDemo", true, new Object[]{} );
+	}
 }

@@ -58,7 +58,7 @@ public class MyDemo implements Command {
 
     }
 
-    public static void main(final String... args) {
+    public static void main(final String... args) throws Exception {
         // We have to make SciView first to setup the graphics properly.
 		SciView sv = SciView.create();
 

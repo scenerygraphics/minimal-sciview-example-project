@@ -64,6 +64,6 @@ public class MyDemo implements Command {
 
 		final ImageJ ij = new ImageJ(sv.getScijavaContext());
 		ij.launch(args);
-		ij.command().run("sc.iview.minimal.MyDemo", true, new Object[]{} );
+		ij.command().run(MyDemo.class, true);
 	}
 }

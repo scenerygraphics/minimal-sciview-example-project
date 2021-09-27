@@ -29,6 +29,7 @@
 package sc.iview.minimal;
 
 import net.imagej.ImageJ;
+import net.imagej.patcher.LegacyInjector;
 import org.scijava.command.Command;
 import org.scijava.plugin.Menu;
 import org.scijava.plugin.Parameter;
@@ -46,6 +47,10 @@ import static sc.iview.commands.MenuWeights.DEMO;
         menu = { @Menu(label = "Demo", weight = DEMO), //
                  @Menu(label = "My Demo") })
 public class MyDemo implements Command {
+
+    static {
+        LegacyInjector.preinit();
+    }
 
     @Parameter
     private SciView sciView;

@@ -1,129 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.scijava</groupId>
-		<artifactId>pom-scijava</artifactId>
-		<version>30.0.0</version>
-		<relativePath />
-	</parent>
+    <parent>
+        <groupId>org.scijava</groupId>
+        <artifactId>pom-scijava</artifactId>
+        <version>31.1.0</version>
+        <relativePath/>
+    </parent>
 
-	<groupId>sc.iview</groupId>
-	<artifactId>minimal-sciview-example-project</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+    <groupId>sc.iview</groupId>
+    <artifactId>minimal-sciview-example-project</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
-	<name>minimal-sciview-example-project</name>
-	<description>This is a minimal SciView project.</description>
-	<url>http://sc.iview.sc/</url>
-	<inceptionYear>2018</inceptionYear>
-	<organization>
-		<name>graphics.scenery</name>
-		<url>http://scenery.graphics/</url>
-	</organization>
-	<licenses>
-		<license>
-			<name>Simplified BSD License</name>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
+    <name>minimal-sciview-example-project</name>
+    <description>This is a minimal SciView project.</description>
+    <url>http://sc.iview.sc/</url>
+    <inceptionYear>2018</inceptionYear>
+    <organization>
+        <name>graphics.scenery</name>
+        <url>http://scenery.graphics/</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>Simplified BSD License</name>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-	<developers>
-		<developer>
-			<id>kephale</id>
-			<name>Kyle Harrington</name>
-			<url>http://imagej.net/User:Kharrington</url>
-			<roles>
-				<role>founder</role>
-				<role>lead</role>
-				<role>developer</role>
-				<role>debugger</role>
-				<role>reviewer</role>
-				<role>support</role>
-				<role>maintainer</role>
-			</roles>
-		</developer>
-	</developers>
-	<contributors>
-		<contributor>
-			<name>Ulrik Guenther</name>
-			<url>http://imagej.net/User:skalarproduktum</url>
-			<properties><id>skalarproduktum</id></properties>
-		</contributor>
-	</contributors>
+    <developers>
+        <developer>
+            <id>kephale</id>
+            <name>Kyle Harrington</name>
+            <url>http://imagej.net/User:Kharrington</url>
+            <roles>
+                <role>founder</role>
+                <role>lead</role>
+                <role>developer</role>
+                <role>debugger</role>
+                <role>reviewer</role>
+                <role>support</role>
+                <role>maintainer</role>
+            </roles>
+        </developer>
+    </developers>
+    <contributors>
+        <contributor>
+            <name>Ulrik Guenther</name>
+            <url>http://imagej.net/User:skalarproduktum</url>
+            <properties>
+                <id>skalarproduktum</id>
+            </properties>
+        </contributor>
+    </contributors>
 
-	<mailingLists>
-		<mailingList>
-			<name>Image.sc Forum</name>
-			<archive>https://forum.image.sc/</archive>
-		</mailingList>
-	</mailingLists>
+    <mailingLists>
+        <mailingList>
+            <name>Image.sc Forum</name>
+            <archive>https://forum.image.sc/</archive>
+        </mailingList>
+    </mailingLists>
 
-	<scm>
-		<connection>scm:git:git://github.com/scenerygraphics/minimal-sciview-example-project</connection>
-		<developerConnection>scm:git:git@github.com:scenerygraphics/minimal-sciview-example-project</developerConnection>
-		<tag>HEAD</tag>
-		<url>https://github.com/scenerygraphics/minimal-sciview-example-project</url>
-	</scm>
-	<issueManagement>
-		<system>GitHub Issues</system>
-		<url>https://github.com/scenerygraphics/minimal-sciview-example-project/issues</url>
-	</issueManagement>
-	<ciManagement>
-		<system>Travis CI</system>
-		<url>https://travis-ci.org/scenerygraphics/minimal-sciview-example-project</url>
-	</ciManagement>
+    <scm>
+        <connection>scm:git:git://github.com/scenerygraphics/minimal-sciview-example-project</connection>
+        <developerConnection>scm:git:git@github.com:scenerygraphics/minimal-sciview-example-project
+        </developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/scenerygraphics/minimal-sciview-example-project</url>
+    </scm>
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/scenerygraphics/minimal-sciview-example-project/issues</url>
+    </issueManagement>
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/scenerygraphics/minimal-sciview-example-project</url>
+    </ciManagement>
 
-	<properties>
-		<package-name>sc.iview</package-name>
+    <properties>
+        <package-name>sc.iview</package-name>
 
-		<license.licenseName>bsd_2</license.licenseName>
-		<license.copyrightOwners>Board of Regents of the University of Idaho.</license.copyrightOwners>
-		<license.projectName>Minimal sciview.</license.projectName>
+        <license.licenseName>bsd_2</license.licenseName>
+        <license.copyrightOwners>Board of Regents of the University of Idaho.</license.copyrightOwners>
+        <license.projectName>Minimal sciview.</license.projectName>
 
-		<sciview.version>28e4ec2</sciview.version>
-		<scenery.version>9877ce1</scenery.version>
+        <sciview.version>e2bc8a6</sciview.version>
+        <scenery.version>e2bfbef</scenery.version>
 
-		<kotlin.version>1.5.10</kotlin.version>
-		<kotlinx-coroutines-core.version>1.5.2</kotlinx-coroutines-core.version>
-		<kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
-	</properties>
+        <kotlin.version>1.5.10</kotlin.version>
+        <kotlinx-coroutines-core.version>1.5.2</kotlinx-coroutines-core.version>
+        <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
+    </properties>
 
-	<dependencies>
+    <dependencies>
 
-		<dependency>
-			<groupId>sc.iview</groupId>
-			<artifactId>sciview</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>sc.iview</groupId>
+            <artifactId>sciview</artifactId>
+        </dependency>
 
-		<!-- ImageJ dependencies -->
-		<dependency>
-			<groupId>net.imagej</groupId>
-			<artifactId>imagej</artifactId>
-		</dependency>
+        <!-- ImageJ dependencies -->
+        <dependency>
+            <groupId>net.imagej</groupId>
+            <artifactId>imagej</artifactId>
+        </dependency>
 
-		<!-- SciJava dependencies -->
-		<dependency>
-			<groupId>org.scijava</groupId>
-			<artifactId>scijava-common</artifactId>
-		</dependency>
-		<!-- Test scope dependencies -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
+        <!-- SciJava dependencies -->
+        <dependency>
+            <groupId>org.scijava</groupId>
+            <artifactId>scijava-common</artifactId>
+        </dependency>
+        <!-- Test scope dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
-	<repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-		<repository>
-			<id>scijava.public</id>
-			<url>https://maven.scijava.org/content/groups/public</url>
-		</repository>
-	</repositories>
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+        <repository>
+            <id>scijava.public</id>
+            <url>https://maven.scijava.org/content/groups/public</url>
+        </repository>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>Maven Repository Switchboard</name>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
 </project>

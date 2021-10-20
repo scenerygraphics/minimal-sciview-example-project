@@ -85,8 +85,8 @@
         <license.copyrightOwners>Board of Regents of the University of Idaho.</license.copyrightOwners>
         <license.projectName>Minimal sciview.</license.projectName>
 
-        <sciview.version>e2bc8a6</sciview.version>
-        <scenery.version>e2bfbef</scenery.version>
+        <sciview.version>6c2f4ce</sciview.version>
+        <scenery.version>9017a37</scenery.version>
 
         <kotlin.version>1.5.10</kotlin.version>
         <kotlinx-coroutines-core.version>1.5.2</kotlinx-coroutines-core.version>

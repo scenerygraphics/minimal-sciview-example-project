@@ -2,16 +2,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<!-- Here we include the scijava parent POM, which defines a set of compatible packages and versions
+	     we can use further down in the <dependencies> section. -->
 	<parent>
 		<groupId>org.scijava</groupId>
 		<artifactId>pom-scijava</artifactId>
-		<version>30.0.0</version>
+		<version>37.0.0</version>
 		<relativePath />
 	</parent>
 
+	<!-- This defines the project name and version, plus some additional metadata, like where to find this project. -->
 	<groupId>sc.iview</groupId>
 	<artifactId>minimal-sciview-example-project</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.2.0</version>
 
 	<name>minimal-sciview-example-project</name>
 	<description>This is a minimal SciView project.</description>
@@ -28,11 +31,12 @@
 		</license>
 	</licenses>
 
+	<!-- This is the list of developers and contributors. You might want to add yourself here. -->
 	<developers>
 		<developer>
-			<id>kephale</id>
-			<name>Kyle Harrington</name>
-			<url>http://imagej.net/User:Kharrington</url>
+			<id>developer</id>
+			<name>Dev E. Loper</name>
+			<url>https://myawesomewebsite.com</url>
 			<roles>
 				<role>founder</role>
 				<role>lead</role>
@@ -44,14 +48,16 @@
 			</roles>
 		</developer>
 	</developers>
+	<!-- Got anyone else contributing to this project? Add them here! -->
 	<contributors>
 		<contributor>
-			<name>Ulrik Guenther</name>
-			<url>http://imagej.net/User:skalarproduktum</url>
-			<properties><id>skalarproduktum</id></properties>
+			<name>Con T. Ributor</name>
+			<url>https://moreawesomewebsite.com</url>
+			<properties><id>con-t-ributor</id></properties>
 		</contributor>
 	</contributors>
 
+	<!-- Where can your users go if they have questions? The ImageJ forums are a great starting point! -->
 	<mailingLists>
 		<mailingList>
 			<name>Image.sc Forum</name>
@@ -59,6 +65,7 @@
 		</mailingList>
 	</mailingLists>
 
+	<!-- Where to find this project on Github (or somewhere else)? Adjust the URLs to the place this project will live at -->
 	<scm>
 		<connection>scm:git:git://github.com/scenerygraphics/minimal-sciview-example-project</connection>
 		<developerConnection>scm:git:git@github.com:scenerygraphics/minimal-sciview-example-project</developerConnection>
@@ -81,19 +88,30 @@
 		<license.copyrightOwners>Board of Regents of the University of Idaho.</license.copyrightOwners>
 		<license.projectName>Minimal sciview.</license.projectName>
 
-		<sciview.version>28e4ec2</sciview.version>
-		<scenery.version>9877ce1</scenery.version>
+		<!-- Here we define the scenery and sciview versions we want to use. git commit hash-based versions
+		     can also be used via jitpack. -->
+		<sciview.version>0.2.0</sciview.version>
+		<scenery.version>0.9.2</scenery.version>
 
-		<kotlin.version>1.5.10</kotlin.version>
-		<kotlinx-coroutines-core.version>1.5.2</kotlinx-coroutines-core.version>
-		<kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
+		<!-- We also configure the necessary Kotlin versions -->
+		<kotlin.version>1.9.22</kotlin.version>
+		<kotlinx-coroutines-core.version>1.8.0</kotlinx-coroutines-core.version>
+		<kotlin.compiler.jvmTarget>21</kotlin.compiler.jvmTarget>
+
+		<!-- slightly evil, but necessary until pom-scijava allows bytecode versions > 51 (Java 8) -->
+		<enforcer.skip>true</enforcer.skip>
+
+		<exec.mainClass>sc.iview.minimal.MyDemo</exec.mainClass>
 	</properties>
 
 	<dependencies>
 
+		<!-- The versions of the packages declared here are managed via the properties defined in the section above,
+		     or via the scijava parent POM included at the top of this file. -->
 		<dependency>
 			<groupId>sc.iview</groupId>
 			<artifactId>sciview</artifactId>
+			<version>${sciview.version}</version>
 		</dependency>
 
 		<!-- ImageJ dependencies -->
@@ -107,6 +125,7 @@
 			<groupId>org.scijava</groupId>
 			<artifactId>scijava-common</artifactId>
 		</dependency>
+
 		<!-- Test scope dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -114,13 +133,37 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- This is the implementation for the logging facility uses. If you intend to ship this as a sciview plugin,
+		     please comment this out, as sciview/Fiji ship their own logger implementations. -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
 	</dependencies>
 
+	<build>
+		<plugins>
+			<!-- scenery and sciview work with Java 21 upwards, we set the respective versions for the compiler here -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>21</source>
+					<target>21</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<repositories>
+		<!-- The jitpack repository is included if you want to use git commit hash-based versions -->
 		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
 		</repository>
+		<!-- The scijava maven repository is necessary for all scijava-related packages -->
 		<repository>
 			<id>scijava.public</id>
 			<url>https://maven.scijava.org/content/groups/public</url>

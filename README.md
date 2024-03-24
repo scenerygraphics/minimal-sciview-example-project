@@ -1,10 +1,10 @@
 # Minimal [sciview](https://github.com/scenerygraphics/sciview) example project 🚀
 
-This repository template serves as a minimal example for a sciview-based project. Click **Use this template** above to create your own project based on this template.
+This repository template serves as a minimal example for a sciview-based project. Click **Use this template** above to create your own project based on this template. We include both Maven and Gradle project file examples – but recommend to choose one of them.
 
 ## Running
 
-You can run the demo included as part of this template project right away from the command line via `./mvnw compile exec:java`. Alternatively, you can import the `pom.xml` file as a project into the Java/Kotlin IDE of your liking. We recommend the free IDE [Jetbrains IntelliJ Community Edition](https://www.jetbrains.com/idea/).
+This example project includes both Maven and Gradle project files, together with the wrappers for both Maven and Gradle. You can run the demo included as part of this template project right away from the command line using Maven via `./mvnw compile exec:java`, or using Gradle via `./gradlew run`. Alternatively, you can import either the Maven project in `pom.xml` or the Gradle project in `build.gradle.kts` as a project into the Java/Kotlin IDE of your liking. We recommend the free IDE [Jetbrains IntelliJ Community Edition](https://www.jetbrains.com/idea/).
 
 ## File Reference
 

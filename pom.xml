@@ -14,7 +14,7 @@
 	<!-- This defines the project name and version, plus some additional metadata, like where to find this project. -->
 	<groupId>sc.iview</groupId>
 	<artifactId>minimal-sciview-example-project</artifactId>
-	<version>0.2.0</version>
+	<version>0.3.0</version>
 
 	<name>minimal-sciview-example-project</name>
 	<description>This is a minimal SciView project.</description>
@@ -90,11 +90,11 @@
 
 		<!-- Here we define the scenery and sciview versions we want to use. git commit hash-based versions
 		     can also be used via jitpack. -->
-		<sciview.version>0.2.0</sciview.version>
-		<scenery.version>0.9.2</scenery.version>
+		<sciview.version>0.3.0</sciview.version>
+		<scenery.version>0.10.1</scenery.version>
 
 		<!-- We also configure the necessary Kotlin versions -->
-		<kotlin.version>1.9.22</kotlin.version>
+		<kotlin.version>1.9.23</kotlin.version>
 		<kotlinx-coroutines-core.version>1.8.0</kotlinx-coroutines-core.version>
 		<kotlin.compiler.jvmTarget>21</kotlin.compiler.jvmTarget>
 

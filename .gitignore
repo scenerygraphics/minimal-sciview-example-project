@@ -9,3 +9,5 @@ target
 /app/ImageJ.app/
 nb-configuration.xml
 /scripts/
+.gradle
+/build/

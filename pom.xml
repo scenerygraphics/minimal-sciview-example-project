@@ -90,8 +90,8 @@
 
 		<!-- Here we define the scenery and sciview versions we want to use. git commit hash-based versions
 		     can also be used via jitpack. -->
-		<sciview.version>0.3.0</sciview.version>
-		<scenery.version>0.10.1</scenery.version>
+		<sciview.version>0.4.0</sciview.version>
+		<scenery.version>0.11.0</scenery.version>
 
 		<!-- We also configure the necessary Kotlin versions -->
 		<kotlin.version>1.9.23</kotlin.version>

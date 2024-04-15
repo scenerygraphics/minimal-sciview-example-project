@@ -28,12 +28,12 @@ publishing {
 }
 
 dependencies {
-    api("sc.iview:sciview:0.3.0") {
+    api("sc.iview:sciview:0.4.0") {
         exclude("org.jogamp.jogl","jogl-all")
         exclude("org.jogamp.gluegen","gluegen-rt")
     }
 
-    api("graphics.scenery:scenery:0.10.1") {
+    api("graphics.scenery:scenery:0.11.0") {
         exclude("org.jogamp.jogl","jogl-all")
         exclude("org.jogamp.gluegen","gluegen-rt")
     }
